@@ -16,4 +16,17 @@ mod tests {
         let result = add(2, 2);
         assert_eq!(result, 4);
     }
+
+    #[test]
+    fn zero_bit_k_map() {
+        // Arrange
+        let num_bits = 0u8;
+        let expected_k_map = [0u128; 0];
+
+        // Act
+        let k_map = generate(num_bits);
+
+        // Assert
+        assert_eq!(k_map, expected_k_map);
+    }
 }
